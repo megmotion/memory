@@ -5,7 +5,7 @@
 }
 body{
 	height: 100vh;
-	background-image: url("img/1769.jpg");
+	background-image: url("img/ballroomMobile.jpg");
 	background-size: cover;
 	display: flex;
 }
@@ -74,6 +74,8 @@ img.back-face{
 	width: 12%;
 	height: 24%;
 	}
+	body {
+	background-image: url("img/1769.jpg");
+	}
 }
 
-}
