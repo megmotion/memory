@@ -3,9 +3,25 @@
 <head>
 	<title>Memory Game</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua|UnifrakturMaguntia" rel="stylesheet">
 	<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+	<div class="overlay-text visible">
+		Click to start
+	</div>
+	<div id="victory-text" class="overlay-text">
+		VICTORY
+		<span class="overlay-text-small">Click to restart</span>
+	</div>
+	<div class="game-info-container">
+		<div class="game-info">
+			Time: <span id="time">0</span>s
+		</div>
+		<div class="game-info">
+			Flips: <span id="flips">0</span>
+		</div>
+	</div>
 	<div class="memory-game">
 		<div class="memory-card" data-framework="book">
 			<img class="front-face" src="img/book.png" alt="React">
@@ -136,6 +152,6 @@
 			<img class="back-face" src="img/fleur.png" alt="Fleur">
 		</div>
 	</div>
-	<script src="script.js"></script>
+	<script src="script.js" async></script>
 </body>
 </html>

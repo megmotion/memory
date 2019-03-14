@@ -1,3 +1,6 @@
+/*font-family: 'UnifrakturMaguntia', cursive;
+font-family: 'Uncial Antiqua', cursive;*/
+
 * {
 	padding: 0;
 	margin: 0;
@@ -9,30 +12,93 @@ body{
 	background-size: cover;
 	display: flex;
 }
-.memory-game{
+.game-info-container {
+	margin-top: 1em;
+	margin-left: 0.5em;
+	width: 70px;
+}
+.game-info {
+	font-family: 'Uncial Antiqua', cursive;
+	color: #DBCC18;
+	font-size: .8em;
+	background-color: rgba(21,75,104,0.6);
+	padding: .5em;
+}
+.overlay-text{
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	color: #f7e519;
+	font-family: 'Uncial Antiqua', cursive;
+}
+.overlay-text-small{
+	font-size: .4em;
+}
+.overlay-text.visible{
 	display: flex;
-	flex-wrap: wrap;
-	height: 560px;
-	width: 300px;
-	margin: auto;
+	flex-direction: column;
+	animation: overlay-grow .2s forwards;
+}
+@keyframes overlay-grow{
+	from {
+		background-color: rgba(18,90,104,0);
+		font-size: 0;
+	}
+	to {
+		background-color: rgba(18,90,104,.6);
+		font-size:4em;
+	}
+}
+.memory-game{
+	display: grid;
+	grid-template-columns: repeat(4,auto);
+	grid-gap: auto;
+	margin: 5px;
+	justify-content: center;
 	perspective: 1000px;
 }
 .memory-card{
 	position: relative;
-	width: 23%;
-	height: 12%;
+	width: 60px;
+	height: 60px;
 	margin: 2px;
 	transform-style: preserve-3d;
-	transition: transform .5s; 
+	transition: transform .3s ease-in-out; 
 }
 .memory-card:active{
-	transform: scale(.97);
+	transform: scale(.95);
 	transition: transform .3s;
 }
 .memory-card.flip{
 	transform: rotateY(180deg);
 }
 
+.memory-card.hide{
+	animation-name: hide;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+@keyframes hide{
+  0%{
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50%{
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100%{
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
 .memory-card:hover {
     -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
@@ -48,12 +114,12 @@ body{
 	border-style: solid;
 	border-width: 3px;
 	border-color: #b68c04;
-	border-radius: 1px;
+	border-radius: 6px;
 	backface-visibility: hidden;
 	background: #154b67; /* Old browsers */
 	background: -moz-linear-gradient(top, #154b67 0%, #28938b 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#154b67), color-stop(100%,#28938b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #154b67 0%,#28938b 100%); /* Chrome10+,Safari5.1+ */
+    background: -webkit-radial-gradient(circle, #28938b  0%,#154b67 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top, #154b67 0%,#28938b 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #154b67 0%,#28938b 100%); /* IE10+ */
     background: linear-gradient(top, #154b67 0%,#28938b 100%); /* W3C */
@@ -66,16 +132,28 @@ img.back-face{
 	padding: 20%;
 }
 @media  (min-width: 768px) {
-	.memory-game {
-	height: 520px;
-	width: 960px;
-	}
-	.memory-card {
-	width: 12%;
-	height: 24%;
-	}
 	body {
 	background-image: url("img/1769.jpg");
+	}
+	.game-info {
+	font-size: 1.3em;
+	}
+	.game-info-container {
+	margin-top: 3.3em;
+	margin-left: 1.5em;
+	width: 145px;
+	}
+	.memory-game {
+	display: grid;
+	grid-template-columns: repeat(8,auto);
+	grid-gap: auto;
+	margin: 50px;
+	justify-content: center;
+	perspective: 1000px;
+	}
+	.memory-card {
+	width: 125px;
+	height: 125px;
 	}
 }
 
