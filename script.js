@@ -69,7 +69,7 @@ function unflipCards() {
 		secondCard.classList.remove('flip');
 
 		resetBoard();
-	}, 1000);
+	}, 850);
 }
 
 function resetBoard() {
@@ -96,9 +96,9 @@ function startNewGame() {
 	cards.forEach(card => card.addEventListener('click', flipCard));
 	startTimer();
 }
-/*(function shuffle() {
+(function shuffle() {
 	cards.forEach(card => {
 		let randomPos = Math.floor(Math.random()*32);
 		card.style.order = randomPos;
 	})
-})();*/
+})();
