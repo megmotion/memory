@@ -179,7 +179,7 @@ function victory() {
 function startTimer() {
 	setInterval (function() {
 	timer.innerHTML = totalTime++;
-	}, 10000);
+	}, 1000);
 }
 
 function startNewGame() {
