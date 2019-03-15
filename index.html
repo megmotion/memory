@@ -3,155 +3,47 @@
 <head>
 	<title>Memory Game</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua|UnifrakturMaguntia" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua|UnifrakturMaguntia|Acme|Lilita+One" rel="stylesheet">
 	<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-	<div class="overlay-text visible">
-		Click to start
-	</div>
-	<div id="victory-text" class="overlay-text">
-		VICTORY
-		<span class="overlay-text-small">Click to restart</span>
-	</div>
-	<div class="game-info-container">
-		<div class="game-info">
-			Time: <span id="time">0</span>s
+	<div id="background" class="background farm">
+		<div class="overlay-text visible">
+			Click to start
 		</div>
-		<div class="game-info">
-			Flips: <span id="flips">0</span>
+		<div id="victory-text" class="overlay-text">
+			VICTORY
+			<span class="overlay-text-small">Click to restart</span>
 		</div>
-	</div>
-	<div class="memory-game">
-		<div class="memory-card" data-framework="book">
-			<img class="front-face" src="img/book.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="carrage">
-			<img class="front-face" src="img/carrage.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="castle">
-			<img class="front-face" src="img/castle.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="crown">
-			<img class="front-face" src="img/crown.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="dragon">
-			<img class="front-face" src="img/dragon.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="king">
-			<img class="front-face" src="img/king.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="pot">
-			<img class="front-face" src="img/pot.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="princess">
-			<img class="front-face" src="img/princess.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="rainbow">
-			<img class="front-face" src="img/rainbow.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="rings">
-			<img class="front-face" src="img/rings.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="shoe">
-			<img class="front-face" src="img/shoe.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="treasure">
-			<img class="front-face" src="img/treasure.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="trees">
-			<img class="front-face" src="img/trees.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="unicorn">
-			<img class="front-face" src="img/unicorn.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="wizard">
-			<img class="front-face" src="img/wizard.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="girl">
-			<img class="front-face" src="img/girl.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="book">
-			<img class="front-face" src="img/book.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="carrage">
-			<img class="front-face" src="img/carrage.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="castle">
-			<img class="front-face" src="img/castle.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="crown">
-			<img class="front-face" src="img/crown.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="dragon">
-			<img class="front-face" src="img/dragon.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="king">
-			<img class="front-face" src="img/king.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="pot">
-			<img class="front-face" src="img/pot.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="princess">
-			<img class="front-face" src="img/princess.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="rainbow">
-			<img class="front-face" src="img/rainbow.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="rings">
-			<img class="front-face" src="img/rings.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="shoe">
-			<img class="front-face" src="img/shoe.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="treasure">
-			<img class="front-face" src="img/treasure.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="trees">
-			<img class="front-face" src="img/trees.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="unicorn">
-			<img class="front-face" src="img/unicorn.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="wizard">
-			<img class="front-face" src="img/wizard.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-		<div class="memory-card" data-framework="girl">
-			<img class="front-face" src="img/girl.png" alt="React">
-			<img class="back-face" src="img/fleur.png" alt="Fleur">
-		</div>
-	</div>
+
+		<div class="game-container">
+			<div class="game-info-container">
+				<div id="game-info" class="farmstyle">
+					<ul>
+						<li>
+						Time: <span id="time">0</span>s
+						</li>
+						<li>
+						Flips: <span id="flips">0</span>
+						</li>
+						<li>
+						Theme: 
+						<div class="changeTheme " id="farm">Farm</div>
+						<div class="changeTheme " id="ballroom">Ballroom</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="board">
+				<div id="board" class="farm">
+				</div>
+			</div>
+		</div> 
+
+		<footer class="footer farmstyle">
+			<a href="http://www.freepik.com">Vectors by vectorpocket and macrovector/ Freepik</a>
+		</footer>
+	</div> 
 	<script src="script.js" async></script>
 </body>
 </html>
