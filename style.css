@@ -23,7 +23,7 @@ font-family: 'Acme', sans-serif;*/
 .game-info-container {
 	margin-left: 0.5em;
 	width: 60px;
-	font-size: 1em;
+	font-size: .8em;
 }
 #game-info {
 	padding: .6em;
@@ -235,10 +235,11 @@ a:link, a:visited {
 	}
 	.game-info-container {
 	margin-left: 5vh;
-	width: 120px;
+	width: 130px;
+	font-size: 1.3em;
 	}
 	.game-info {
-	font-size: 1.3em;
+	font-size: 2em;
 	padding: 2em;
 	}
 	#board{
@@ -247,11 +248,11 @@ a:link, a:visited {
 	}
 	#board.ballroom{
 	grid-template-columns: repeat(8,auto);
-	margin-left: 4vh;
+	margin-left: 5vh;
 	}
 	#board.farm{
 	grid-template-columns: repeat(4,auto);
-	margin-left: 40vh;
+	margin-left: 44vh;
 	}
 	.memory-card {
 	width: 125px;
