@@ -2,6 +2,7 @@
 const board = document.querySelector('#board');
 const background = document.querySelector('#background');
 const footer = document.querySelector("footer");
+const victory_text = document.querySelector("#victory-text");
 
 let overlays = Array.from(document.getElementsByClassName('overlay-text'));
 let hasFlippedCard = false;
@@ -52,6 +53,8 @@ const changeTheme = (theme) => {
         game_info.classList.remove('ballroomstyle');
         footer.classList.add('farmstyle');
         footer.classList.remove('ballroomstyle');
+        victory_text.classList.add('farmstyle');
+        victory_text.classList.remove('ballroomstyle');
 
     } else { 
         boardSize = 32;
@@ -65,6 +68,8 @@ const changeTheme = (theme) => {
         game_info.classList.remove('farmstyle');
         footer.classList.add('ballroomstyle');
         footer.classList.remove('farmstyle');
+        victory_text.classList.add('ballroomstyle');
+        victory_text.classList.remove('farmstyle');
     };   
     startNewGame();
 }

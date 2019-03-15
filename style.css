@@ -68,7 +68,15 @@ li{
 	align-items: center;
 	z-index: 100;
 	color: #f7e519;
+	font-family: 'Acme', sans-serif;
+}
+.overlay-text.ballroomstyle{
+	color: #f7e519;
 	font-family: 'Uncial Antiqua', cursive;
+}
+.overlay-text.farmstyle{
+	color: #f7e519;
+	font-family: 'Acme', sans-serif;
 }
 .overlay-text-small{
 	font-size: .4em;
