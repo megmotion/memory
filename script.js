@@ -181,18 +181,12 @@ function resetBoard() {
 function victory() {
 	document.getElementById('victory-text').classList.add('visible');
 }
-function startTimer() {
-	setInterval (function() {
-	timer.innerHTML = totalTime++;
-	}, 1000);
-}
 
 function startNewGame() {
 	matchedCards = [];
 	totalClicks = 0;
 	ticker.innerText = totalClicks;
-	totalTime = 0;
 	tempImages = [...images, ...images];
-	startTimer();
+
 	generateBoard();
 }
