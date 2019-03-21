@@ -46,11 +46,11 @@ li{
 	list-style-type: none;
 }
 .changeTheme {
-	font-size:.6em;
-	padding-left: .8em;
+	font-size:.9em;
+	padding-left: .4em;
 }
 .changeTheme:hover {
-	font-size: .7em;
+	font-size: 1.1em;
 	font-weight: bold;
 }
 .changeTheme.selected {
@@ -235,7 +235,7 @@ a:link, a:visited {
 	}
 	.game-info-container {
 	margin-left: 5vh;
-	width: 130px;
+	width: 140px;
 	font-size: 1.3em;
 	}
 	.game-info {
